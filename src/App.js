@@ -15,7 +15,7 @@ function App() {
         emailData: 'sooah@dev.org'
     },
     {
-        // nameData: 'Chrissy',
+        nameData: 'Chrissy',
         emailData: 'chrissy@dev.org'
     }
   ];
