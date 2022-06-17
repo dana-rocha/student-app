@@ -24,6 +24,7 @@ const StudentList = (props) => {
 StudentList.propTypes = {
     students: PropTypes.arrayOf(
     PropTypes.shape({
+        id: PropTypes.number.isRequired,
         nameData: PropTypes.string.isRequired,
         emailData: PropTypes.string.isRequired,
     })
