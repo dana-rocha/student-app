@@ -5,13 +5,17 @@ import { useState } from 'react';
 const Student = (props) => {
     const [isPresent, setIsPresent] = useState(false);
 
+    const togglePresence = () => {
+        setIsPresent(!isPresent);
+    };
+
     return (
         <div>
         <ul>
             <li>Nickname: {props.name}</li>
             <li>Email: {props.email}</li>
         </ul>
-        <button>Toggle if {props.name} is present</button>
+        <button onClick={togglePresence}>Toggle if {props.name} is present</button>
         </div>
     );
 };
