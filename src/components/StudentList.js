@@ -32,8 +32,9 @@ StudentList.propTypes = {
         id: PropTypes.number.isRequired,
         nameData: PropTypes.string.isRequired,
         emailData: PropTypes.string.isRequired,
-    })
-    ),
+        isPresentData: PropTypes.bool
+    })),
+    onUpdateStudent: PropTypes.func.isRequired
 };
 
 export default StudentList;
