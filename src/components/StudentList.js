@@ -13,6 +13,7 @@ const StudentList = (props) => {
             name={student.nameData} 
             email={student.emailData}
             isPresent={student.isPresentData}
+            onUpdate={props.onUpdateStudent}
         ></Student>
         </li>
     );
