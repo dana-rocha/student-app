@@ -16,6 +16,9 @@ const NewStudentForm = () => {
 
     const onNameChange = (event) => {
         setFormFields({
+            // Cloning the original formFields object
+            // Clone will already have a name and key but the new 
+            // value will overwrite the cloned value
             ...formFields,
             name: event.target.value
         })
