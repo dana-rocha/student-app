@@ -1,8 +1,8 @@
-// import logo from './logo.svg';
 import './App.css';
 import StudentList from './components/StudentList';
-// import ClassInfo from './components/ClassInfo';
 import { useState } from 'react';
+
+// App component is responsible for managing all student data
 
 function App() {
   const [studentData, setStudentData] = useState([

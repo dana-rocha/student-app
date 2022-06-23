@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Student.css';
 
+// Student component is responsible for displaying the details of one student
+// It contains a button that toggles whether the student is present or not
+
 const Student = (props) => {
 
     const onAttendanceButtonClick = () => {
