@@ -39,7 +39,7 @@ function App() {
     setStudentData(students);
   };
 
-  const addStudentData = newStudent => {
+  const addStudentData = (newStudent) => {
     // Duplicate the student list
     const newStudentList = [...studentData];
 
@@ -63,7 +63,9 @@ function App() {
         students={studentData}
         onUpdateStudent={updateStudentData}
       ></StudentList>
-      <NewStudentForm></NewStudentForm>
+      <NewStudentForm>
+        addStudentCallback={addStudentData}
+      </NewStudentForm>
     </main>
   );
 }
