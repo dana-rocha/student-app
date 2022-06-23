@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+// NewStudentForm component is responsible for containing a form to add a new student
+
 // New piece of state to hold the form data and input values read from state
 // Creating an event handler for each input field
 // Each event handler will update state
