@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 // NewStudentForm component is responsible for containing a form to add a new student
 
@@ -6,7 +7,7 @@ import { useState } from 'react';
 // Creating an event handler for each input field
 // Each event handler will update state
 
-const NewStudentForm = () => {
+const NewStudentForm = (props) => {
 
     const [formFields, setFormFields] = useState({
         name: '',
@@ -33,8 +34,23 @@ const NewStudentForm = () => {
         })
     };
 
+    const onFormSubmit = (event) => {
+        // onFormSubmit is an event handler, an Event object will be passed in as first param
+        event.preventDefault();
+
+        props.addStudentCallback({
+            nameData: formFields.name,
+            emailData: formFields.email
+        });
+
+        setFormFields({
+            name: '',
+            email: '',
+        });
+    };
+
     return (
-        <form>
+        <form onSubmit={onFormSubmit}>
             <div>
                 <label htmlFor="fullName"> Name: </label>
                 <input 
@@ -54,6 +70,10 @@ const NewStudentForm = () => {
                 value="Add Student"/>
         </form>
     );
+};
+
+NewStudentForm.propTypes = {
+    addStudentCallback: PropTypes.func.isRequired
 };
 
 export default NewStudentForm;
