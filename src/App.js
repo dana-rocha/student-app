@@ -1,6 +1,7 @@
 import './App.css';
 import StudentList from './components/StudentList';
 import { useState } from 'react';
+import NewStudentForm from './components/NewStudentForm';
 
 // App component is responsible for managing all student data
 
@@ -45,6 +46,7 @@ function App() {
         students={studentData}
         onUpdateStudent={updateStudentData}
       ></StudentList>
+      <NewStudentForm></NewStudentForm>
     </main>
   );
 }
