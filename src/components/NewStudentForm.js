@@ -37,18 +37,19 @@ const NewStudentForm = () => {
                 <label htmlFor="fullName"> Name: </label>
                 <input 
                     name="fullName"
-                    value={formFields.name}/>
+                    value={formFields.name}
+                    onChange={onNameChange}/>
             </div>
             <div>
                 <label htmlFor="email"> Email: </label>
                 <input 
                     name="email"
-                    value={formFields.email}/>
+                    value={formFields.email}
+                    onChange={onNameChange}/>
             </div>
             <input
                 type="submit"
-                value="Add Student" 
-            />
+                value="Add Student"/>
         </form>
     );
 };
