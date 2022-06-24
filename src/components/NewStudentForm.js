@@ -63,7 +63,7 @@ const NewStudentForm = (props) => {
                 <input 
                     name="email"
                     value={formFields.email}
-                    onChange={onNameChange}/>
+                    onChange={onEmailChange}/>
             </div>
             <input
                 type="submit"
